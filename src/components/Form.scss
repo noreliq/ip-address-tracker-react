@@ -1,0 +1,48 @@
+@import "../assets/scss/variables.scss";
+@import "../assets/scss/mixins.scss";
+
+.form {
+  position: relative;
+
+  box-shadow: $shadow;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  display: flex;
+
+  &--invalid input {
+    color: red;
+  }
+
+  input {
+    flex-grow: 1;
+    border: 0px;
+    background: white;
+    padding: 0;
+    height: 60px;
+    max-width: 100%;
+    padding-left: 20px;
+
+    &:focus {
+      outline: none;
+      background: #eee;
+    }
+  }
+
+  button {
+    flex-shrink: 0;
+    background: black;
+    border: 0px;
+    height: 60px;
+    width: 60px;
+
+    cursor: pointer;
+    &:hover {
+      background: $grey-darker;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
